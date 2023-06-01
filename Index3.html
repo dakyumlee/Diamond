@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diamond</title>
+  <style>
+  @font-face {
+    font-family: 'TAEBAEKmilkyway';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/TAEBAEKmilkyway.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  body {
+    background-color: #F2F2F2;
+    font-family: 'TAEBAEKmilkyway';
+  }
+
+  h1 {
+    display: inline-block;
+    color: #BFA004;
+  }
+
+  a {
+    text-decoration: none;
+    color: #BFA004;
+  }
+
+  .index {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .index li {
+    padding: 10px;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: auto;
+  }
+
+  .index li:hover {
+    color: black;
+    background-color: #D9CAAD;
+    border-radius: 100%;
+  }
+  
+  .index li a:hover {
+    color: black;
+    border-radius: 100%;
+  }
+  
+  .one {
+    font-size: 24px;
+  }
+
+.dropmenu{
+  border:none;
+  border:0px;
+  margin:0px;
+  padding:0px;
+  font-family: 'TAEBAEKmilkyway';
+  font-size:18px;
+  }
+  
+  .dropmenu ul{
+  background: #F2F2EB;
+  height:100px;
+  list-style:none;
+  margin:0;
+  padding:0;
+  }
+  
+  .dropmenu li{
+  float:left;
+  padding:0px;
+  }
+  
+  .dropmenu li a{
+  background: #F2F2EB;
+  color:#403F3C;
+  display:block;
+  line-height:100px;
+  margin:0px;
+  padding:0px 25px;
+  text-align:center;
+  text-decoration:none;
+  }
+  
+  .dropmenu li a:hover, .dropmenu ul li:hover a{
+  background: #BFA004;
+  color: #F2F2EB;
+  text-decoration:none;
+  }
+  
+  #modal_btn{
+  height: 150px;
+  margin-right: 60px;
+  margin-left: 60px;
+}
+
+
+
+.modal_background {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  z-index: 1;
+  overflow-y: auto;
+  font-weight: 300;
+}
+
+.modal_close {
+  width: 26px;
+  height: 26px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.modal_wrap .text {
+  margin-top: 45px;
+  margin-left: 5px;
+}
+
+.modal_close .closeImg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.frame {
+  text-align: center;
+}
+
+.info > h2 {
+  margin: 0px;
+  font-family: 'TAEBAEKmilkyway';
+  font-size: 35px;
+}
+
+.info > p {
+  font-family: 'TAEBAEKmilkyway';
+  font-weight: 300;
+  font-size: 16px;
+  margin-bottom: 40px;
+}
+
+#other {
+  font-family: 'TAEBAEKmilkyway';
+  font-weight: 400;
+  font-size: 20px;
+  font-style: italic;
+  line-height: 30px;
+}
+
+
+    .modal_wrap {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 60%;
+      transform: translate(-50%, -50%);
+      background-color: #D9CAAD;
+      border: 1px solid #ccc;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+      z-index: 9999;
+      max-height: 80vh;
+      overflow-y: auto;
+      padding: 20px;
+    }
+
+    .modal_wrap img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .modal_background {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 9998;
+    }
+
+    .close {
+      position: absolute;
+      top: 0;
+      right: 0;
+      font-size: 20px;
+      padding: 10px;
+      cursor: pointer;
+    }
+
+    .img {
+      text-align: center;
+      margin-top: 90px;
+    }
+    
+    .content {
+      text-align: center;
+    }
+
+    .content2 {
+      text-align: center;
+      font-size: 20px;
+    }
+</style>
+</head>
+  <body>
+    <nav class="navbar">
+      <ul class="index">
+        <li><a href="Index.html" class="one">Diamond</a></li>
+        <li><a href="Index2.html">You're</a></li>
+        <li><a href="Index3.html">My</a></li>
+        <li><a href="Index4.html">Only</a></li>
+        <li><a href="Index5.html">One</a></li>
+      </ul>
+    </nav>
+    <hr style="border:3px solid #BFA004;">
+    <div class="img">
+    <img id="modal_btn" src="Diamond.jpg"></div>
+    <div class="content"><h2>
+          SHOW MORE(click picture)</h2><br><br>
+          <div class="content2">
+아티스트/	검정치마<br>
+앨범 종류/	정규<br>
+발매일/	2017.05.30<br>
+장르/	인디, 락/메탈<br>
+스타일/	인디 락<br>
+기획사/	HIGHGRND<br>
+유통사/	YG PLUS<br>
+재생 시간/	40:42<br>
+고음질/	FLAC 16bit<br>
+    </div>
+  </div>
+    <div class="info">
+      <div class="modal_background"></div>
+      <div class="modal_wrap">
+        <div class="modal_close"><img class="closeImg" src="closeImg.png" alt="x버튼" onClick="modalClose()"></div>
+        <div class="text">
+          <h2>앨범 소개</h2><br><br>
+          <p>Love is all, all is love<br>
+            검정치마 [Team Baby]<br><br>
+            
+            인류가 이야기를 멜로디에 실어 부르기 시작한 이래, 대부분의 노래는 사랑에 관한 것이었다.<br>
+            누군가 누군가와 사랑에 빠지는 순간, 호르몬은 요동치고 일상은 흔들린다.<br>
+            어떤 형태로든 그 활화산같은 감정을 표현하고 싶어진다. 그저 그런 재능을 가진 범부라 할지라도 하다못해 일생일대의 연서라도 남기는 법, 하물며 예술가라 불리우는 이들은 어떻겠는가.<br>
+            우리는 빼어난 재능이 사랑의 터널을 통과하며 탄생시킨 수많은 명작들을 알고 있다.<br>
+            그 터널에 비추는 빛이 순애 건, 짝사랑이건, 그리움이건 간에 그 모든 사랑은 곧 창작의 강고한 원천이 되었고 우리는 그 명작들에 열광해왔고, 또 다른 사랑의 산물을 기다려왔다.<br>
+            나는 말할 수 있다. 검정치마의 3집 [Team Baby]는 그 기다림에 화답할 수 있는 꽃다발이라고.<br><br>
+            
+            검정치마는 지난 두 장의 앨범을 통해 한국 대중음악계에 확고한 지분을 남겼다.<br>
+            한국 인디의 르네상스였던 2008년, 말 그대로 ‘갑툭튀’한 데뷔 앨범 [201]은 신인의 풋풋함과 베테랑의 노련함을 동시에 가진 걸작이었다.<br>
+            동시대 미국 인디 록의 문법을 능숙하게 구사하되 거기에 빼어나고 적나라한 한국어 가사까지 녹아 들었다.<br>
+            이 의외의 등장은 평단과 언론의 상찬을 불렀다.<br>
+            당시의 앨범 발매 얼마 후 있었던 발매 기념 공연은 물론이고, 2009년 가을 그랜드 민트 페스티벌에 섰을 때는 낮 시간대였음에도 불구하고 올림픽 체조 경기장이 꽉 차는 진풍경을 만들기도 했다.<br>
+            다시 언론이 인디 음악을 이야기하던 그 때, 검정치마는 자신의 깃발을 꽂고 중원을 향해 파죽지세로 말을 달리던 기수 중 한 명이었던 것이다.<br>
+            그 여세는 2011년 [Don't You Worry Baby (I'm Only Swimming)]로도 고스란히 이어졌다.<br>
+            1집에 비해 어쿠스틱 지향성이 강해진 이 앨범에도 검정치마의 팝적 감각은 그대로였다.<br>
+            귀에 짝짝 달라붙는 멜로디와 마음에 척척 와 닿는 가사는 얼터 컨트리와 포크, 심지어 80년대 한국 가요의 문법까지 확장되며 그 해의 가장 중요한 작품이 됐다.<br><br>
+            
+            그로부터 6년이 지났다. 오며 가며 조휴일을 볼 때 마다 늘 새 앨범 작업중이라는 말을 들었다.<br>
+            녹음이 어느 정도 진행됐다는 얘기도 들었다. 하지만 본격적 귀환의 기미가 보이지 않았다.<br>
+            비치 보이스의 전설적 미 발매 앨범 [Smile]이나 건스 앤 로지스의 [Chinese Democracy]를 기다리는 심정이었다.<br>
+            그 사이 검정치마와 비슷한 시기에 데뷔한 밴드들은 한 장 한 장, 디스코 그래피를 쌓아나가고 있었기에 더욱 그랬다.<br>
+            2015년 오랜만의 싱글 ‘Hollywood’가 나왔을 때 드디어 컴백인가 싶었지만, 1년 뒤 ‘Everything’과 ‘내 고향 서울엔’ 두 곡의 싱글을 추가로 발매했을 뿐 정규 소식은 들리지 않았다.<br>
+            그 해 6월 드라마 [또, 오해영]OST에 실린 ‘기다린 만큼, 더’는 그 제목 자체로 고문과 같은 것이었다.<br><br>
+            
+            그로부터 또 1년이 지났다. 마침내, 검정치마가 돌아왔다. 전대미문의 프로젝트로 돌아왔다.<br>
+            그 동안 만든 30곡의 노래를 총 세 장의 앨범에 담아 순차적으로 발매한다. [Team Baby]는 그 서막이다.<br>
+            "이 앨범에서는 사랑, 그리고 보고 있어도 보고 싶어지는 그리움을 노래했다. 지금 사랑을 하고 있는 당신과, 그런 당신의 편에 서있는 사람을 위한 앨범이다.”<br>
+            조휴일이 밝힌 대로, 이 앨범은 사랑 노래들의 연작이다. 검정치마의 음악에는 모든 감정이 날카롭다. 상대를 조롱하기도 하고 분노하기도 한다. 섬뜩할 만큼 솔직하다.<br>
+            하지만 그 감정이 애정이 될 때는 얘기가 달라진다. 듣는 것 만으로도 심장이 뛰고 마음이 애틋해진다. 봄의 들판과 여름의 바다, 가을의 하늘같은 기운이 약동한다.<br>
+            1집의 ‘좋아해줘’ ‘Antifreeze’가 그랬고, 2집의 ‘젊은 우리 사랑’ ‘Love Shine’도 그랬다. [Team, Baby]는 그런 노래들에 담긴 감정들을 끌어 모아 다시 프리즘에 투영시킨 빛의 지도다.<br><br>
+            
+            첫 곡 ‘난 아니에요’는 세상의 바깥과 내 안 쪽의 충돌로 인해 발생하는 피로를 털어 놓는 듯한 자조적인 곡이다. 힘 빠진 독백의 뒤로는 안개같은 파장들이 나부낀다.<br>
+            ‘Everything’에서 보여줬던 드림 팝 스타일의 아름다운 혼란이 끝나갈 무렵 힘찬 드럼 소리와 함께 두 번째 트랙, ‘Big Love’가 시작된다.
+            자연스럽게 이어지는 이 두 곡 사이에는 기차역 플랫폼을 연상시키는 효과음이 들어간다.<br>
+            마치 해무 가득한 밤바다에서 홀로 빛나는 등대를 발견했을 때 처럼, 수많은 인파 사이에서 한 눈에 들어오는 연인의 얼굴을 봤을 때 처럼, 음반의 분위기는 급격히 반전된다.1집을 좋아했던 이들이라면 반색할 만한 곡이다.<br>
+            그 뒤로 이어지는 노래들의 다채로운 사운드들이 각 장의 테마를 구성할 뿐만 아니라, 한국 가요계에 수용됐던 팝 장르들이 검정치마 스타일로 재해석된다.<br>
+            부연하자면 이렇다. ‘한시 오분(1:05)’에는 투투, 룰라, 김건모 등 90년대 중반 가요계를 휩쓸었던 ‘한국식 레게’의 리듬과 사운드가 고스란히 묻어 있다.<br>
+            ‘폭죽과 풍선들’ 역시 90년대 초반의 댄스 뮤직에서 흔히 볼 수 있었던, 80년대 초반 모타운 사운드의 기묘한 변형을 숨김없이 받아 안는다.<br>
+            서구 팝이 한국에 수용되면서 기술적, 문화적 한계로 인해 보였던 변형들이 후대에는 촌스럽다는 이유로 기피되기 마련이었지만, 검정치마는 그 때의 그 정서를 오히려 적극적으로 받아 안는다.<br>
+            이는 그가 청소년기와 20대의 절반을 해외에서 보냈기에 가능한 일일 것으로 짐작된다.<br>
+            동시대 한국에서 성장했다면 의도적으로 피할 정서를, 오히려 외국에서 보내며 편견없이 수용할 수 있었기 때문일 것이다.<br>
+            이런 외부자적 정서는 사실, 검정치마의 모든 음악을 관통하는 핵심 키워드이기도 하다.<br><br>
+            
+            이토록 넓은 음악적 스펙트럼은, 하나의 정서로 모여 든다. 그렇다. 사랑이다. [Team, Baby]는 한 사람을 위한 순애보다.<br>
+            유재하의 [사랑하기 때문에]처럼, 이 앨범에 담긴 모든 노래는 한 사람을 위해 만들어진 노래다.<br>
+            사랑이란 누군가에 대한 마음이기도 하지만, 스스로도 몰랐던 자기 자신을 발견하게 되는 사건이기도 하다. 그 과정에서 사랑하는 사람은 시인이 되고 탐험가가 된다.<br>
+            전에는 머리 속에 담겨 있지 않았던 언어들이, 마음으로부터 샘솟아 오른다. 스스로에게 놀라는 순간들이 온다.<br>
+            어딘가에 기록해두고 싶었던 그 절실한 마음의 선물을, 검정치마는 상쾌하고 아련한 멜로디에 담아 우리를 대신하여 배송한다.<br>
+            보고 있어도 보고 싶고, 함께 있어도 같이 있고 싶고, 잠시나마 떨어지면 안부를 전해지고 싶어지는, 호르몬의 혼수상태가 열 곡의 노래가 되어 세상에 나왔다.<br>
+            우리의 이야기 같거나, 우리의 이야기가 되었으면 하는 노래들이 말이다.
+            <br><br>
+            당신이 사랑하고 있다면, 혹은 마음에 둔 사람이 있다면, 카톡에 링크 걸어 고백 대신 사용할 수 있는 노래 한 곡 쯤은 분명히 발견할 수 있을 것이다.<br>
+            뻔한 사랑 노래의 홍수에 진저리치는 사람일지라도 피해갈 수 없을 것이다. 장담하고 싶다.<br><br>
+            
+            - 김작가 (대중음악평론가)<br><br>
+            
+            
+            All music & words written and arranged by 조휴일<br>
+            Produced by - 김성수 & 조휴일<br>
+            Recorded at - tone studio seoul & doggy rich<br>
+            Mixed and mastered by - 김대성<br>
+            Engineers - 김대성, 양하정, 이상권, 정태준<br>
+            Assisting engineers - 권유진, 신동주, 최민성<br>
+            Cover and cd design - 윤지현 & 조휴일<br><br>
+            
+            
+            1. 난 아니에요<br>
+            조휴일 - electric guitar, synths, programming, samples<br><br>
+            
+            
+            2. Big Love<br>
+            조휴일 - acoustic guitar, electric guitar, slide guitar, synths, programming, percussion<br>
+            신동훈 - drums<br>
+            이경남 - bass<br>
+            고경천 - organ<br>
+            김진환 - percussion<br>
+            임형준, 서승택, 윤시황, 박세훈 - background vocals<br><br>
+            
+            
+            3. Diamond<br>
+            조휴일 - acoustic guitar, electric guitar, synths<br>
+            신동훈 - drums<br>
+            이경남 - bass<br>
+            고경천 - organ<br>
+            정재일 - piano<br>
+            윤시황 - slide guitar<br>
+            백준명 - guitar solo<br>
+            김진환 - percussion<br><br>
+            
+            
+            4. Love Is All<br>
+            조휴일 - acoustic guitar, electric guitar, synths, percussion<br>
+            신동훈 - drums<br>
+            이경남 - bass<br>
+            정재일 - piano<br>
+            원영조 - organ<br>
+            윤시황 - guitar solo<br><br>
+            
+            
+            5. 내 고향 서울엔<br>
+            조휴일 - acoustic guitar, electric guitar, bass, synths, percussion<br>
+            신동훈 - drums<br>
+            이희태 - ep<br>
+            김명기 - saxophone<br>
+            La Musica - strings<br>
+            김성수 & 전종혁 - string arrangement<br><br>
+            
+            
+            6. 폭죽과 풍선들<br>
+            조휴일 - acoustic guitar, electric guitar, synths, percussion<br>
+            신동훈 - drums<br>
+            이경남 - bass<br>
+            고경천 - organ, ep<br>
+            김명기 - saxophone solo<br>
+            김진환 - percussion<br>
+            Jacob Wynne & Dave Kasper - trumpet, saxophone, horn arrangement<br><br>
+            
+            
+            7. 한시 오분 (1:05)<br>
+            조휴일 - electric guitar, slide guitar, synths, programming, samples<br>
+            신동훈 - drums<br>
+            김문희 - bass<br>
+            고경천 - organ, ep<br>
+            김명기 - saxophone<br>
+            DJ Soulscape - samples<br>
+            김진환 - percussion<br><br>
+            
+            
+            8. 나랑 아니면<br>
+            조휴일 - acoustic guitar, electric guitar, synths, percussion<br>
+            신동훈 - drums<br>
+            이경남 - bass<br>
+            정재일 - piano<br>
+            윤시황 - lap steel<br>
+            La Musica - strings<br>
+            김성수 & 전종혁 - string arrangement<br>
+            김진환 - percussion<br><br>
+            
+            
+            9. 혜야<br>
+            조휴일 - electric guitar<br>
+            신동훈 - drums<br>
+            이경남 - bass<br>
+            고경천 - organ<br>
+            정재일 - piano<br>
+            La Musica - strings<br>
+            김성수 & 전종혁 - string arrangement<br>
+            Scott Smith - background vocals<br><br>
+            
+            
+            10. EVERYTHING<br>
+            조휴일 - electric guitar, bass, synths, samples, percussion<br>
+            신동훈 - drums<br><br></p>
+        </div>
+      </div>
+    </div>
+<script>
+function modalOpen() {
+  document.querySelector('.modal_wrap').style.display = 'block';
+  document.querySelector('.modal_background').style.display = 'block';
+}
+
+function modalClose() {
+  document.querySelector('.modal_wrap').style.display = 'none';
+  document.querySelector('.modal_background').style.display = 'none';
+}
+
+document.querySelector('#modal_btn').addEventListener('click', modalOpen);
+</script>
+  </body>
+</html>
